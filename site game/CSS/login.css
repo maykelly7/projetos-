@@ -1,0 +1,121 @@
+.login{
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../imagem/8002111\ \(1\).png);
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}    
+.box{
+    margin-top: 150px;
+    width: 90%;
+    height: 75%;
+    background-color: rgba(240, 248, 255, 0.55);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    animation: pulse 1s infinite;
+}
+@keyframes pulse{
+    from{
+        box-shadow: 0px 0px 0px 0px #fff;
+    }
+    to{
+        box-shadow: 0px 0px 50px 10px rgb(234, 0, 255);
+    }
+}
+
+
+
+.form-box{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.form-box h2{
+    font-size: 36px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: purple;
+    margin-bottom: 80px;
+    text-align: center;
+}
+.form-box form{
+    width: 70%;
+    height: 80%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.input-group{
+    position: relative;
+}
+.input-group label{
+    font-size: 16px;
+    color: rgb(99, 102,102);
+    top: -10px;
+    position: absolute;
+    left: 10px;
+    background-color: #dfdbdb;
+    transition: all 0.3s ease;
+}
+.input-group input{
+    padding: 10px;
+    width: 90%;
+    background-color: transparent;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px;
+    outline: 0;
+}
+.form-box .input-group input:placeholder-shown+label{
+    top: 10px;
+    background-color: transparent;
+}
+.input-group input:focus{
+    border-color: rgb(200,10, 80);
+}
+.form-box form .input-group input:focus+label{
+    top: -10px;
+    left: 10px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(200,10, 80);
+    font-weight: 600;
+    font-size: 16px;
+}
+.botoes{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.botoes button{
+    width: 60%;
+    height: 30px;
+    border-radius: 5px;
+    background-color: rgb(200,10, 80);
+    color: #fff;
+    padding: 5px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+.botoes button:hover{
+    background-color: #fff;
+    border: 2px solid rgb(200,10, 80);
+    color: rgb(200,10, 80);
+}
+.area-img img{
+    filter: drop-shadow(0px 0px 50px 10px rgb(200,10,80));
+}
