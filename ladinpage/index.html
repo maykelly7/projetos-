@@ -6,21 +6,67 @@
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Cardápio Fábrica de Software</title>
+    <script src="js/carrossel.js"></script>
+
+    <script src="./js/script.js" defer></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
 </head>
 <body>
     <header>
         <nav class="navbar">
             <i class="fa-solid fa-burger" id="nav_logo">food</i>
             <ul class="nav_list">
-                <li class="nav-item"><a href="">Home</a></li>
-                <li class="nav-item"><a href="">Cardápio</a></li>
-                <li class="nav-item"><a href="">Avaliações</a></li>
+                <li class="nav-item"><a href="#home">Home</a></li>
+                <li class="nav-item"><a href="#cardapio">Cardápio</a></li>
+                <li class="nav-item"><a href="#depoimentos">Avaliações</a></li>
             </ul>
             <button class="btn-default">Peça Aqui</button>
         </nav>
+        <button class="btn-default-mobile">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <div class="mobile-menu">
+             <ul class="mobile-nav-list">
+                <li class="nav-item"><a href="#home">Home</a></li>
+                <li class="nav-item"><a href="#cardapio">Cardapio</a></li>
+                <li class="nav-item"><a href="#depoimentos">Avaliações</a></li>
+             </ul>
+             <button class="btn-default">Peça Aqui</button>
+        </div>
+       
     </header>
+    <section class="slider">
+        <div class="slider-content">
+                <input type="radio" name="" id="radio1">
+                <input type="radio" name="" id="radio2">
+                <input type="radio" name="" id="radio3">
+            
+            <div class="slide-box primeiro">
+                <img src="src/Festival-de-Burgers-horizontal1.jpg" alt="" class="img-desktop">
+            </div>
+            <div class="slide-box"><img src="src/Burger-Picanha-Burger-1024x643-1.webp" alt="" class="img-desktop">
+            </div>
+            <div class="slide-box"><img src="src/hamburguer-vegetariano-em-um-banner-horizontal-de-fundo-preto-com-espaco-de-copia-generative-ai_124603-888.avif" alt="" class="img-desktop">
+            </div>
+            <div class="nav-auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+            </div>
+            <div class="nav-manual">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+            </div>
+
+        </div>
+    </section>
+
+
     <main class="content">
-        <section class="home">
+        <section class="home" id="home">
             <div class="shape"></div>
             <div class="cta">
                 <h1 class="title">
@@ -50,7 +96,7 @@
         </section>
     </main>
  
-    <section class="cardapio">
+    <section class="cardapio" id="cardapio">
         <h2 class="section-title">Cardápio</h2>
         <h3 class="section-subtitle">Nossos pratos especiais.</h3>
         <div class="dishes">
@@ -201,7 +247,7 @@
  
         </div>
     </section>
-    <section class="depoimentos">
+    <section class="depoimentos" id="depoimentos">
         <img src="src/img1.png" alt="" class="imagem-chef">
         <div class="depoimentos-content">
             <h2 class="section-title">Depoimentos</h2>
@@ -270,6 +316,7 @@
 
         </div>
     </footer>
+
    
 </body>
 </html>
