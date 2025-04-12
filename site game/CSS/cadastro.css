@@ -1,103 +1,117 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    overflow-x: hidden;
-    font-family: Arial, Helvetica, sans-serif;
-
-}
-
-.box {
+.cadastro{
+    background-color: black;
+    background-repeat: no-repeat;
+    background-position: bottom left;
     display: flex;
-    padding: 150px;
-    background-color: rgb(0, 0, 0);
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-
-.form-box {
-    background-color: rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(10px);
+}    
+.box{
+    margin-top: 90px;
     width: 50%;
-    height: 50%;
-    padding: 30px 20px;
+    height: 100%;
+    background-color: rgba(240, 248, 255, 0.55);
+    backdrop-filter: blur(20px);
     border-radius: 20px;
-
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    animation: pulse 1s infinite;
+    
+}
+@keyframes pulse{
+    from{
+        box-shadow: 0px 0px 0px 0px #fff;
+    }
+    to{
+        box-shadow: 0px 0px 40px 10px rgb(79, 0, 87);
+    }
 }
 
-.form-box h2 {
-    font-size: 36px;
-    color: #61178ef7;
+.form-box{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.form-box h2{
+    font-size: 25px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: purple;
+    margin-bottom: 50px;
     text-align: center;
 }
-
-.form-box p {
-    font-size: 18px;
-    position: absolute;
-    left: 30%;
-    color: #d3d3d3;
-    text-align: right;
-
-}
-
-.form-box p a {
-    text-decoration: none;
-    color: #5c0c68;
-}
-
-.form-box form {
-    margin: 20px 0;
-}
-
-.form-box .input-group {
-    margin-bottom: 15px;
-}
-
-.form-box .input-group label {
-    color: #3d3d3d;
-    font-weight: bold;
-    display: block;
-    margin-bottom: 5px;
-}
-
-.form-box .input-group input {
-    width: 100%;
-    height: 40px;
-    background-color: rgda(255, 255, 255, 0.5);
-    border-radius: 10px;
-    outline: none;
-    border: 2px solid transparent;
+.form-box form{
+    width: 100;
+    height: auto;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
     padding: 15px;
-    font-size: 15px;
-    color: #5c023c;
-    transition: all 0.4s ease;
-}
-
-.form-box .input-group input:focus {
-    border-color: #5c023c;
-}
-
-.botoes {
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
+    justify-content: center;
 }
-
-.form-box .input-group button {
-    width: 150px;
-    height: 40px;
-    background-color: #5c0c68;
-    border-radius: 15px;
-    outline: none;
-    border: none;
-    margin-top: 15px;
-    color: azure;
+.input-group{
+    position: relative;
+}
+.input-group label{
+    font-size: 16px;
+    color: rgb(99, 102,102);
+    top: -10px;
+    position: absolute;
+    left: 10px;
+    background-color: #dfdbdb;
+    transition: all 0.3s ease;
+}
+.input-group input{
+    padding: 10px;
+    width: 90%;
+    background-color: transparent;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px;
+    outline: 0;
+}
+.form-box .input-group input:placeholder-shown+label{
+    top: 10px;
+    background-color: transparent;
+}
+.input-group input:focus{
+    border-color: rgb(200,10, 80);
+}
+.form-box form .input-group input:focus+label{
+    top: -10px;
+    left: 10px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(200,10, 80);
+    font-weight: 600;
     font-size: 16px;
 }
-
-.form-box .input-group button:hover {
-    background-color: #5c023c;
+.botoes{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.botoes button{
+    width: 60%;
+    height: 30px;
+    border-radius: 5px;
+    background-color: rgb(200,10, 80);
+    color: #fff;
+    padding: 5px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+.botoes button:hover{
+    background-color: #fff;
+    border: 2px solid rgb(200,10, 80);
+    color: rgb(200,10, 80);
+}
+.area-img img{
+    filter: drop-shadow(0px 0px 50px 10px rgb(200,10,80));
 }
